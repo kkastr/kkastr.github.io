@@ -3,5 +3,5 @@
 
 @import "{{ site.theme }}";
 #forkme_banner{ display: none !important; }
-#main_content_wrap{background-color: #212121;}
-h1, h2, h3, h4, h5, h6 {color: #ffffff;}
+.main_content{background-color: #212121;}
+.main_content h1, .main_content h2,.main_content h3,.main_content h4,.main_content h5,.main_content h6 {color: #ffffff;}
