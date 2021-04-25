@@ -1,6 +1,7 @@
 theme: jekyll-theme-slate
-github:
-  is_project_page: false
+
 
 title: A website
 description: Under construction.
+
+github.is_project_page: false
