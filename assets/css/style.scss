@@ -3,5 +3,5 @@
 
 @import "{{ site.theme }}";
 #forkme_banner{ display: none !important; }
-.main-content{background-color: #212121;}
-.main-content h1, .main-content h2,.main-content h3,.main-content h4,.main-content h5,.main-content h6 {color: #ffffff;}
+section.main-content{background-color: #212121;}
+section.main-content h1, section.main-content h2,section.main-content h3,section.main-content h4,section.main-content h5,section.main-content h6 {color: #ffffff;}
