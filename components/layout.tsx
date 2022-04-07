@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import utilStyles from './../styles/utils.module.css'
 import Link from 'next/link'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,9 +21,9 @@ export default function Layout({
   home?: boolean
 }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
         <meta
           name="description"
           content=""
@@ -41,7 +41,7 @@ export default function Layout({
         {home ? (
           <>
             <img
-              src="/images/profile.jpg"
+              src="./images/profile.jpg"
               className={utilStyles.borderCircle}
               height={96}
               width={96}
@@ -63,7 +63,7 @@ export default function Layout({
             <Link href="/">
               <a>
                 <img
-                  src="/images/profile.jpg"
+                  src="./images/profile.jpg"
                   className={utilStyles.borderCircle}
                   height={96}
                   width={96}

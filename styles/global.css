@@ -1,12 +1,10 @@
-html,
-
 :root {
 	--color-primary-accent: #9d86e9;
 	--color-secondary-accent: #61dafb;
 	--color-primary: #fff;
 	--color-background: #111;
 }
-
+html,
 body {
   background-color: var(--color-background);
   color: var(--color-primary);
