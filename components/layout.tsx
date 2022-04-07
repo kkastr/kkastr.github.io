@@ -1,11 +1,17 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faLinkedin
+  } from "@fortawesome/free-brands-svg-icons";
+
+
+const name = 'Konstantinos Kastritis'
+export const siteTitle = 'Portfolio'
 
 export default function Layout({
   children,
@@ -20,7 +26,7 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content=""
         />
         <meta
           property="og:image"
@@ -35,34 +41,41 @@ export default function Layout({
         {home ? (
           <>
             <img
-              priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={96}
+              width={96}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+            <h1 className={utilStyles.headingMd}>{name}</h1>
+
+            <div className={utilStyles.socialContainer}>
+              <a href='https://github.com/kkastr' className={`${utilStyles.github} ${utilStyles.social}`}>
+              <FontAwesomeIcon icon={faGithub}/>
+              </a>
+              <a href='https://www.linkedin.com/in/konstantinos-kastritis-269366232/' className={`${utilStyles.linkedin}  ${utilStyles.social}`}>
+              <FontAwesomeIcon icon={faLinkedin}/>
+              </a>
+            </div>
+        </>
         ) : (
           <>
             <Link href="/">
               <a>
                 <img
-                  priority
                   src="/images/profile.jpg"
                   className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
+                  height={96}
+                  width={96}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            {/* <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2>
+            </h2> */}
           </>
         )}
       </header>
@@ -70,7 +83,7 @@ export default function Layout({
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <button> ←Back </button>
           </Link>
         </div>
       )}
