@@ -1,6 +1,6 @@
 html,
 
-[data-theme="dark"] {
+:root {
 	--color-primary-accent: #9d86e9;
 	--color-secondary-accent: #61dafb;
 	--color-primary: #fff;

@@ -9,14 +9,8 @@
 .socialContainer {
 
   display: inline-flex;
-
-  /* size: 0.2em; */
-  /* height: 2rem;
-  width: 4rem; */
-  /* padding: 25px 50px; */
-  /* text-align: center; */
-  /* display: inline-block; */
 }
+
 a.github {
   width: 3rem;
   height: 3rem;
@@ -26,16 +20,18 @@ a.github {
 a.linkedin {
   width: 3rem;
   height: 3rem;
+  color:white;
 }
 
 a.social {
   margin: 0 1rem;
-  transition: transform 250ms;
+  transition: transform 100ms;
   display: inline-flex;
 }
 
 a.social:hover {
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
+  transform: scale(1.5);
 }
 
 .headingXl {
