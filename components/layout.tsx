@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from './../styles/utils.module.css'
 import Link from 'next/link'
-
+import { Container, Heading, SimpleGrid, Divider, chakra } from '@chakra-ui/react'
+import SocialBar from './../components/socialbar'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -11,7 +12,7 @@ import {
 
 
 const name = 'Konstantinos Kastritis'
-export const siteTitle = 'Portfolio'
+export const siteTitle = 'kkastr - home'
 
 export default function Layout({
   children,
@@ -28,18 +29,10 @@ export default function Layout({
           name="description"
           content=""
         />
-        {/* <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        /> */}
-        {/* <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
+          <Container display="flex" centerContent={true}>
             <img
               src="./images/profile.jpg"
               className={utilStyles.borderCircle}
@@ -47,17 +40,12 @@ export default function Layout({
               width={96}
               alt={name}
             />
-            <h1 className={utilStyles.headingMd}>{name}</h1>
 
-            <div className={utilStyles.socialContainer}>
-              <a href='https://github.com/kkastr' className={`${utilStyles.github} ${utilStyles.social}`}>
-              <FontAwesomeIcon icon={faGithub}/>
-              </a>
-              <a href='https://www.linkedin.com/in/konstantinos-kastritis-269366232/' className={`${utilStyles.linkedin}  ${utilStyles.social}`}>
-              <FontAwesomeIcon icon={faLinkedin}/>
-              </a>
-            </div>
-        </>
+            <Heading as='h3' size='lg'>{name}</Heading>
+
+            <SocialBar></SocialBar>
+
+          </Container>
         ) : (
           <>
             <Link href="/">
@@ -71,22 +59,17 @@ export default function Layout({
                 />
               </a>
             </Link>
-            {/* <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2> */}
           </>
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <button> ←Back </button>
           </Link>
         </div>
-      )}
+      )} */}
     </div>
   )
 }
