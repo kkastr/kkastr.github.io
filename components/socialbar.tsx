@@ -10,7 +10,6 @@ import {
     faLinkedin
   } from "@fortawesome/free-brands-svg-icons";
 
-  import utilStyles from './../styles/utils.module.css'
 
 export default function SocialBar() {
     return (
