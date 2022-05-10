@@ -1,12 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { Container, Heading, SimpleGrid, Divider, Image, Box, chakra } from '@chakra-ui/react'
-import SocialBar from './../components/socialbar'
+import {Box} from '@chakra-ui/react'
 import React from 'react'
 
-const siteTitle = 'kkastr - home'
-
 export default function Layout({children}: {children: React.ReactNode}) {
+    const siteTitle = 'kkastr - home'
     return (
         <Box as="main" pb={10}>
             <Head>
@@ -14,9 +11,8 @@ export default function Layout({children}: {children: React.ReactNode}) {
             <title>{siteTitle}</title>
             </Head>
 
-        <>
-        {children}
-        </>
+            {children}
+
         </Box>
     )
 }
