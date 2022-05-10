@@ -23,8 +23,8 @@ function BarItem(
 
 export default function SocialBar() {
     return (
-        <Container mt={2} centerContent={true}>
-        <SimpleGrid columns={[1, 2]} spacing={10}>
+        <Container mt={2} display='flex' centerContent >
+        <SimpleGrid w={100} columns={2} spacing={4}>
 
             <BarItem
                 contentLink='https://github.com/kkastr'
