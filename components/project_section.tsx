@@ -95,21 +95,21 @@ export default function ProjectSection() {
                 <GridItem
                     thumb='./images/default_profile.jpg'
                     title='Stock predictions'
-                    shortDescription='Using LSTMs to model the closing values of securities.'
-                    longDescription={`Using LSTMs to model the closing values of securities.`}
+                    shortDescription='Modelling the closing values of securities with LSTMs.'
+                    longDescription={`Generate predictions for the closing value of securities by using Long Short Term Memory (LSTM) neural networks to model the time series of the stock price.`}
                     contentLink='https://github.com/kkastr/stock-price-predictions/'
                     contentType='GitHub'
-                    previewImages={['./images/NFLX_pred.png', './images/GOOG_pred.png']}
+                    previewImages={['./images/MSFT_pred.png', './images/AMZN_pred.png']}
                 />
 
                 <GridItem
                     thumb='./images/default_profile.jpg'
                     title='Sentiment Analysis'
                     shortDescription='NLP sentiment analysis on reddit comments.'
-                    longDescription={`NLP sentiment analysis on reddit comments.`}
+                    longDescription={`Scrape data from reddit using the reddit api, and conduct sentiment analysis on the comments. In addition, obtain information such as the best time of day to post to maximize score, how the sentiment of the post affects the score etc.`}
                     contentLink='https://github.com/kkastr/reddit-sentiment/'
                     contentType='GitHub'
-                    previewImages={['./images/AMZN_pred.png']}
+                    previewImages={['./images/sentiment_percent_per_sub.png']}
 
                 />
 
@@ -117,7 +117,7 @@ export default function ProjectSection() {
                     thumb='./images/default_profile.jpg'
                     title='Brownian dynamics'
                     shortDescription='Brownian dynamics simulations written in CUDA for GPUs.'
-                    longDescription={`Brownian dynamics simulations written in CUDA for GPUs.`}
+                    longDescription={`Brownian dynamics written entirely on the gpu so that it is easy to scale to tens of thousands of particles for better statistics on whatever physical system you wish to investigate.`}
                     contentLink='https://github.com/kkastr/cuda-brownian-dynamics/'
                     contentType='GitHub'
                     previewImages={['./images/msd.png']}
@@ -126,8 +126,8 @@ export default function ProjectSection() {
                 <GridItem
                     thumb='./images/default_profile.jpg'
                     title='Research'
-                    shortDescription='Research publications.'
-                    longDescription={`Research publications.`}
+                    shortDescription='My research publications.'
+                    longDescription={`Journal publications during my time in the de Haan Lab, including my MSc thesis.`}
                     contentLink='https://scholar.google.ca/citations?hl=en&user=lVNtC6cAAAAJ'
                     contentType='Google Scholar'
                     previewImages={[null]}
