@@ -117,7 +117,7 @@ export default function ProjectSection() {
                     thumb='./images/bd_thumb3.png'
                     title='Brownian dynamics'
                     shortDescription='Brownian dynamics simulations written in CUDA for GPUs.'
-                    longDescription={`Brownian dynamics written entirely on the gpu so that it is easy to scale to tens of thousands of particles for better statistics on whatever physical system you wish to investigate.`}
+                    longDescription={`Brownian dynamics written entirely on the gpu so that it is easy to scale to tens of thousands of particles for faster results and better statistics on whatever physical system you wish to investigate.`}
                     contentLink='https://github.com/kkastr/cuda-brownian-dynamics/'
                     contentType='GitHub'
                     previewImages={['./images/bd_vis.gif']}
