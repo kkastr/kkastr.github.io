@@ -93,7 +93,7 @@ export default function ProjectSection() {
             <SimpleGrid mt={6} columns={[2, 2]} spacing={4}>
 
                 <GridItem
-                    thumb='./images/default_profile.jpg'
+                    thumb='./images/stock_thumb.png'
                     title='Stock predictions'
                     shortDescription='Modelling the closing values of securities with LSTMs.'
                     longDescription={`Generate predictions for the closing value of securities by using Long Short Term Memory (LSTM) neural networks to model the time series of the stock price.`}
@@ -103,7 +103,7 @@ export default function ProjectSection() {
                 />
 
                 <GridItem
-                    thumb='./images/default_profile.jpg'
+                    thumb='./images/sentiment_thumb.png'
                     title='Sentiment Analysis'
                     shortDescription='NLP sentiment analysis on reddit comments.'
                     longDescription={`Scrape data from reddit using the reddit api, and conduct sentiment analysis on the comments. In addition, obtain information such as the best time of day to post to maximize score, how the sentiment of the post affects the score etc.`}
@@ -114,19 +114,19 @@ export default function ProjectSection() {
                 />
 
                 <GridItem
-                    thumb='./images/default_profile.jpg'
+                    thumb='./images/bd_thumb3.png'
                     title='Brownian dynamics'
                     shortDescription='Brownian dynamics simulations written in CUDA for GPUs.'
                     longDescription={`Brownian dynamics written entirely on the gpu so that it is easy to scale to tens of thousands of particles for better statistics on whatever physical system you wish to investigate.`}
                     contentLink='https://github.com/kkastr/cuda-brownian-dynamics/'
                     contentType='GitHub'
-                    previewImages={['./images/msd.png']}
+                    previewImages={['./images/bd_vis.gif']}
                 />
 
                 <GridItem
-                    thumb='./images/default_profile.jpg'
+                    thumb='./images/research_thumb.png'
                     title='Research'
-                    shortDescription='My research publications.'
+                    shortDescription='Research publications.'
                     longDescription={`Journal publications during my time in the de Haan Lab, including my MSc thesis.`}
                     contentLink='https://scholar.google.ca/citations?hl=en&user=lVNtC6cAAAAJ'
                     contentType='Google Scholar'
