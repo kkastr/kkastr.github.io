@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Container, SimpleGrid, IconButton, Button, ButtonGroup} from '@chakra-ui/react'
+import { Container, SimpleGrid, IconButton, Box, Stack} from '@chakra-ui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
@@ -21,24 +21,11 @@ function BarItem(
     )
 }
 
-export default function SocialBar() {
+export default function SideBar() {
     return (
-        <Container maxW='5xl' mt={2} display='flex' centerContent >
+        <Stack position='fixed' direction={['column']} spacing='16px' right='12px' bottom='50%'>
 
-        <ButtonGroup ml={10} variant='outline' spacing={4}>
-
-        <Button fontFamily='Helvetica' fontWeight='semibold'> Resume </Button>
-
-        <NextLink href={'https://github.com/kkastr'} passHref>
-        <Button fontFamily='Helvetica' fontWeight='semibold'> Github </Button>
-        </NextLink>
-        <NextLink href={'https://github.com/kkastr'} passHref>
-        <Button fontFamily='Helvetica' fontWeight='semibold'> LinkedIn </Button>
-        </NextLink>
-
-        </ButtonGroup>
-        {/* <SimpleGrid ml={4} w='66%' columns={3} spacing={4}> */}
-            {/* <BarItem
+            <BarItem
                 contentLink='https://github.com/kkastr'
                 contentLabel='Github'
                 contentIcon={<FontAwesomeIcon icon={faGithub}/>}
@@ -47,9 +34,9 @@ export default function SocialBar() {
                 contentLink='https://www.linkedin.com/in/konstantinos-kastritis-269366232/'
                 contentLabel='LinkedIn'
                 contentIcon={<FontAwesomeIcon icon={faLinkedin}/>}
-            /> */}
+            />
 
-        {/* </SimpleGrid> */}
-        </Container>
+        </Stack>
+
     )
 }

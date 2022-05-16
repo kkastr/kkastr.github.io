@@ -1,16 +1,15 @@
 import Layout from './../components/layout'
 import ProfileHeader from '../components/profile_header'
 import BioSection from '../components/bio_section'
-import SocialBar from '../components/social_bar'
-import ProjectSection from '../components/project_section'
-
+import ProjectSection from '../components/featured_projects'
+import SideBar from '../components/sidebar'
 
 export default function Home() {
     return (
         <Layout>
             <ProfileHeader/>
 
-            <SocialBar/>
+            <SideBar/>
 
             <BioSection/>
 
