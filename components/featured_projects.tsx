@@ -37,12 +37,12 @@ export default function ProjectSection() {
 
             <FeaturedItem
                 title='Brownian dynamics'
-                longDescription={`Brownian dynamics written for gpus so that it is easy to scale to tens of thousands of particles for faster results and better statistics on whatever physical system you wish to investigate.`}
+                longDescription={`Brownian dynamics written for gpus, making it easy to scale to tens of thousands of particles for faster results and better statistics on whatever physical system you wish to investigate.`}
                 contentLink='https://github.com/kkastr/cuda-brownian-dynamics/'
-                previewImage={'./images/bd_vis.gif'}
+                previewImage={'./images/bd_anim.gif'}
                 imageLocationLeft={true}
                 imgHeight={346}
-                imgAspect= {1.39303482587}
+                imgAspect= {1}
             />
 
 
