@@ -6,10 +6,11 @@ import {
 
 
 export default function BioSection() {
-    const section_name='Bio'
-    const description=`Konstantinos is a physicist and programmer with a passion for
+    const section_name = 'Bio'
+    const description = `Konstantinos is a physicist and programmer with a passion for
                        learning and problem solving. He likes exploring any data he can get his hands on and using code to gain insight into real-life problems.`
 
+    const resumepdf = './kastritis_resume.pdf'
     const githubLink = 'https://github.com/kkastr'
     const linkedinLink = 'https://www.linkedin.com/in/konstantinos-kastritis-269366232/'
     const email = 'dinokastritis@gmail.com'
@@ -20,7 +21,7 @@ export default function BioSection() {
         <Container maxW='4xl'>
             <Heading> {section_name} </Heading>
 
-            <Box mt={6} display={{md: 'flex'}}  flexDirection={{md: 'row-reverse'}}>
+            <Box mt={6} display={{ md: 'flex' }} flexDirection={{ md: 'row-reverse' }}>
                 <Image
                     flexShrink={0}
                     boxSize={imgSize}
@@ -36,14 +37,15 @@ export default function BioSection() {
                     <Center mt={8} >
                         <ButtonGroup variant='outline' spacing={4}>
 
-                        <Button fontFamily='Helvetica' fontWeight='semibold'> Resume </Button>
-
-                        <NextLink href={githubLink} passHref>
-                        <Button fontFamily='Helvetica' fontWeight='semibold'> Github </Button>
-                        </NextLink>
-                        <NextLink href={linkedinLink} passHref>
-                        <Button fontFamily='Helvetica' fontWeight='semibold'> LinkedIn </Button>
-                        </NextLink>
+                            <NextLink href={resumepdf} passHref>
+                                <Button fontFamily='Helvetica' fontWeight='semibold'> Resume </Button>
+                            </NextLink>
+                            <NextLink href={githubLink} passHref>
+                                <Button fontFamily='Helvetica' fontWeight='semibold'> Github </Button>
+                            </NextLink>
+                            <NextLink href={linkedinLink} passHref>
+                                <Button fontFamily='Helvetica' fontWeight='semibold'> LinkedIn </Button>
+                            </NextLink>
 
                         </ButtonGroup>
                     </Center>
