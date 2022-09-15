@@ -42,6 +42,16 @@ export default function ProjectSection() {
                 imgHeight={346}
                 imgAspect={1}
             />
+            <FeaturedItem
+                title='Command Line Music Recommender'
+                longDescription={`Music recommendation program to find new songs. Interfaces with the Spotify dev API, and gives recommendations based on a typical cosine
+                distance algorithm.`}
+                contentLink='https://github.com/kkastr/music-recommendation'
+                previewImage={'./images/music_recommender_output.png'}
+                imageLocationLeft={false}
+                imgHeight={300}
+                imgAspect={1.2}
+            />
 
 
             <Container display={{ md: 'flex' }} centerContent>
