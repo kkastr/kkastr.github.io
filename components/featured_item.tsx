@@ -49,53 +49,6 @@ export default function FeaturedItem(
             />
 
         </Box>
-
-
-
-
-        // <Grid
-        // height={gridHeight}
-        // gap={1}
-        // mt={10}
-        // mb={20}
-        // templateRows='repeat(3, 1fr)'
-        // templateColumns='repeat(5, 1fr)'
-        // >
-
-        //     <GridItem colStart={imageColNum} rowSpan={2} colSpan={3}  margin='auto'>
-        //         <Image
-        //         src={previewImage}
-
-        //         rounded='md'
-        //         display='flex'
-        //         overflow='hidden'
-        //         />
-
-        //     </GridItem>
-
-        //     <GridItem rowStart={1} colStart={textColNum} colSpan={2} margin='auto'>
-        //         <Heading fontSize={32} textAlign={justifySwitch}> {title}</Heading>
-        //     </GridItem>
-
-        //     <GridItem
-        //     zIndex={2} bg='#2d333b'
-        //     rowStart={2} colStart={textColNum} colSpan={2}
-        //     boxShadow='base'
-        //     rounded='md'
-        //     margin='auto'
-        //     >
-        //         <Text mx={5} my={5} fontSize={18} textAlign={justifySwitch}>{longDescription}</Text>
-        //     </GridItem>
-
-        //     <GridItem margin='auto' colStart={textColNum} colSpan={2} >
-
-        //         <NextLink href={contentLink} passHref>
-        //         <Link>{contentLink}<ExternalLinkIcon mx={0.5}/> </Link>
-        //         </NextLink>
-        //     </GridItem>
-
-        // </Grid>
-
     )
 
 }
