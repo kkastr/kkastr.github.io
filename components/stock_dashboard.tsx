@@ -10,7 +10,6 @@ import {
   } from 'chart.js';
 
 import { Line } from 'react-chartjs-2';
-import zoomPlugin from 'chartjs-plugin-zoom';
 import { faker } from '@faker-js/faker';
 import { Container, Box, SimpleGrid, IconButton, Button, Text } from '@chakra-ui/react'
 import stockdata from './data/database.json'
@@ -22,7 +21,6 @@ ChartJS.register(
     LinearScale,
     PointElement,
     LineElement,
-    zoomPlugin,
     Title,
     Tooltip,
     Legend
