@@ -27,7 +27,7 @@ export default function FeaturedItem(
             <Box mt={2} mr={boxMarginRight} ml={boxMarginLeft}>
 
                 <Heading mb={2} fontSize={28} textAlign={{md: 'center'}}> {title}</Heading>
-                <Center  bg='#2d333b' boxShadow='base' rounded='md'>
+                <Center  boxShadow='dark-lg' rounded='md'>
                     <Text mx={5} my={5} fontSize={17} textAlign={{md: justifySwitch}}> {longDescription} </Text>
                 </Center>
                 <Center >

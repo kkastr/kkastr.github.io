@@ -13,7 +13,6 @@ import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
 import { Container, Box, SimpleGrid, IconButton, Button, Text } from '@chakra-ui/react'
 import stockdata from './data/database.json'
-import datjson from './data/AAPL_data.json'
 import DashboardItem from './stock_board_row';
 import React from 'react'
 ChartJS.register(

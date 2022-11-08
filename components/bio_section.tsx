@@ -30,7 +30,7 @@ export default function BioSection() {
                     src='./images/profile.jpg'
                 />
                 <Box mt={2} mr={12}>
-                    <Center bg='#2d333b' boxShadow='base' rounded='md'>
+                    <Center boxShadow='dark-lg' rounded='md'>
                         <Text mx={5} my={5} fontSize={20}> {description} </Text>
                     </Center>
                     <Center mt={8} >
