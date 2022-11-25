@@ -5,11 +5,17 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 }
 
-
+const colors = {
+    portfolio: {
+      slatedark: '#22272E',
+      slatelight: '#2a3139',
+      pink: '#ff63c3'
+  }
+}
 const styles = {
   global: {
     body: {
-      bg: '#22272E',
+      bg: 'portfolio.slatedark',
     },
   },
 }
@@ -20,6 +26,6 @@ const fonts = {
   mono: `'Roboto', sans-serif`,
 }
 
-const theme = extendTheme({styles, fonts, config})
+const theme = extendTheme({colors, styles, fonts, config})
 
 export default theme

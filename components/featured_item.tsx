@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Grid, GridItem, Heading, Image, Text, Box, Center, Link,} from '@chakra-ui/react'
+import { Heading, Image, Text, Box, Center, Link,} from '@chakra-ui/react'
 
 
 export default function FeaturedItem(
@@ -27,12 +27,13 @@ export default function FeaturedItem(
             <Box mt={2} mr={boxMarginRight} ml={boxMarginLeft}>
 
                 <Heading mb={2} fontSize={28} textAlign={{md: 'center'}}> {title}</Heading>
-                <Center  boxShadow='dark-lg' rounded='md'>
-                    <Text mx={5} my={5} fontSize={17} textAlign={{md: justifySwitch}}> {longDescription} </Text>
+
+                <Center bgColor='portfolio.slatelight' boxShadow='dark-lg' rounded='md'>
+                    <Text as="span" mx={5} my={5} fontSize={17}> {longDescription} </Text>
                 </Center>
                 <Center >
                     <NextLink href={contentLink} passHref>
-                    <Link >Github Repository<ExternalLinkIcon mx={0.5}/> </Link>
+                    <Link color='portfolio.pink'>Github Repository<ExternalLinkIcon mx={0.5}/> </Link>
                     </NextLink>
                 </Center>
 

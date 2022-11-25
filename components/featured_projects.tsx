@@ -57,7 +57,7 @@ export default function ProjectSection() {
             <Container display={{ md: 'flex' }} centerContent>
                 <Heading> Research </Heading>
                 <NextLink href={gscholarLink} passHref>
-                    <Link>Google Scholar<ExternalLinkIcon mx='2px' /> </Link>
+                    <Link color='portfolio.pink'>Google Scholar<ExternalLinkIcon mx='2px' /> </Link>
                 </NextLink>
             </Container>
 

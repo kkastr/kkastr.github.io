@@ -22,7 +22,7 @@ export default function PageHeader() {
                 />
             </Box>
             <NextLink href='/' passHref>
-                <Button mt={10} fontFamily='Helvetica' fontWeight='semibold'> Back to Home </Button>
+                <Button mt={10} fontFamily='Helvetica' fontWeight='semibold' variant='outline'> Back to Home </Button>
             </NextLink>
         </Container>
     )

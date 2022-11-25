@@ -5,7 +5,7 @@ import NextLink from 'next/link'
 export default function DashboardBar() {
     return (
         <Container maxW='5xl' mt={10} mb={10} display='flex' centerContent>
-            <ButtonGroup spacing={4}>
+            <ButtonGroup spacing={4} variant='outline'>
             <NextLink href='/reddit-sentiment' passHref>
                 <Button fontFamily='Helvetica' fontWeight='semibold'>
                 Sentiment Analysis Dashboard
