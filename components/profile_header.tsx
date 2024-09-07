@@ -1,13 +1,12 @@
-import { Container, Heading, Text} from '@chakra-ui/react'
-
-
 export default function ProfileHeader() {
-    const name = 'Konstantinos Kastritis'
-    const job_desc = 'Computational Physicist | Data Scientist'
-    return (
-        <Container maxW='5xl' mt={10} mb={10} display='flex' centerContent>
-            <Heading fontSize={{base: '3xl', md:'5xl'}}>{name}</Heading>
-            <Text fontSize={{base: 'lg', md:'xl'}}> {job_desc} </Text>
-        </Container>
-    )
+  const name = "Konstantinos Kastritis";
+  const title = "Computational Physicist | Data Scientist";
+  return (
+    <div className="flex mx-10 mt-10 mb-5 justify-center">
+      <div>
+        <h2 className="text-2xl/tight text-center font-bold md:text-4xl/tight"> {name} </h2>
+        <p className="text-md text-center md:text-xl"> {title} </p>
+      </div>
+    </div>
+  );
 }
