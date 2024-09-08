@@ -6,7 +6,7 @@ import pfp from "../public/images/profile.jpg";
 
 export default function BioSection() {
   const section_name = "Bio";
-  const description = `Konstantinos is a physicist turned data scientist with a passion for solving complex problems through data-driven insights. Combining his analytical background with expertise in coding and machine learning, he transforms diverse datasets into actionable outcomes. Konstantinos specializes in applying machine learning, statistical methods, and algorithmic techniques to real-world problems.`;
+  const description = `Konstantinos is a physicist turned data scientist with a passion for solving complex problems through data-driven insights. Combining his analytical background with expertise in coding and machine learning, he transforms diverse datasets into actionable outcomes. Konstantinos specializes in applying statistical methods, and algorithmic techniques to real-world problems.`;
 
   const resumepdf = "./kastritis_resume.pdf";
   const githubLink = "https://github.com/kkastr";
