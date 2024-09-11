@@ -9,19 +9,19 @@
     --card-foreground: 0 0% 0%;
     --popover: 231 11% 88%;
     --popover-foreground: 0 0% 0%;
-    --primary: 203 26% 66%;
+    --primary: 232 20% 71%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 139 36% 42%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 218 48% 32%;
+    --secondary-foreground: 231 11% 88%;
     --muted: 230 12% 20%;
     --muted-foreground: 0 0% 70%;
-    --accent: 188 50% 49%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 215 100% 29%;
+    --accent-foreground: 231 11% 88%;
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 0%;
     --border: 230 12% 20%;
     --input: 230 12% 20%;
-    --ring: 188 50% 40%;
+    --ring: 215 100% 40%;
 
     --radius: 0.5rem;
 
@@ -55,41 +55,41 @@
     --background-900: 228 10% 10%;
     --background-950: 220 12% 5%;
 
-    --primary-50: 206 28% 95%;
-    --primary-100: 203 25% 90%;
-    --primary-200: 203 25% 80%;
-    --primary-300: 203 25% 70%;
-    --primary-400: 203 26% 60%;
-    --primary-500: 203 26% 50%;
-    --primary-600: 203 26% 40%;
-    --primary-700: 203 25% 30%;
-    --primary-800: 203 25% 20%;
-    --primary-900: 203 25% 10%;
-    --primary-950: 197 28% 5%;
+    --primary-50: 240 20% 95%;
+    --primary-100: 229 22% 90%;
+    --primary-200: 231 20% 80%;
+    --primary-300: 232 20% 70%;
+    --primary-400: 233 20% 60%;
+    --primary-500: 232 20% 50%;
+    --primary-600: 233 20% 40%;
+    --primary-700: 232 20% 30%;
+    --primary-800: 231 20% 20%;
+    --primary-900: 229 22% 10%;
+    --primary-950: 228 20% 5%;
 
-    --secondary-50: 140 36% 95%;
-    --secondary-100: 139 37% 90%;
-    --secondary-200: 138 35% 80%;
-    --secondary-300: 139 36% 70%;
-    --secondary-400: 139 36% 60%;
-    --secondary-500: 139 36% 50%;
-    --secondary-600: 139 36% 40%;
-    --secondary-700: 139 36% 30%;
-    --secondary-800: 138 35% 20%;
-    --secondary-900: 139 37% 10%;
-    --secondary-950: 140 36% 5%;
+    --secondary-50: 215 46% 95%;
+    --secondary-100: 218 49% 90%;
+    --secondary-200: 219 47% 80%;
+    --secondary-300: 218 48% 70%;
+    --secondary-400: 218 48% 60%;
+    --secondary-500: 218 48% 50%;
+    --secondary-600: 218 48% 40%;
+    --secondary-700: 218 48% 30%;
+    --secondary-800: 219 47% 20%;
+    --secondary-900: 218 49% 10%;
+    --secondary-950: 220 46% 5%;
 
-    --accent-50: 189 52% 95%;
-    --accent-100: 187 49% 90%;
-    --accent-200: 188 50% 80%;
-    --accent-300: 188 50% 70%;
-    --accent-400: 188 50% 60%;
-    --accent-500: 188 50% 50%;
-    --accent-600: 188 50% 40%;
-    --accent-700: 188 50% 30%;
-    --accent-800: 188 51% 20%;
-    --accent-900: 187 49% 10%;
-    --accent-950: 189 52% 5%;
+    --accent-50: 215 100% 95%;
+    --accent-100: 215 100% 90%;
+    --accent-200: 215 100% 80%;
+    --accent-300: 215 100% 70%;
+    --accent-400: 215 100% 60%;
+    --accent-500: 215 100% 50%;
+    --accent-600: 215 100% 40%;
+    --accent-700: 215 100% 30%;
+    --accent-800: 215 100% 20%;
+    --accent-900: 215 100% 10%;
+    --accent-950: 215 100% 5%;
   }
 
   .dark {
@@ -99,19 +99,19 @@
     --card-foreground: 0 0% 100%;
     --popover: 231 11% 12%;
     --popover-foreground: 0 0% 100%;
-    --primary: 203 26% 34%;
+    --primary: 232 20% 29%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 139 36% 58%;
+    --secondary: 218 48% 68%;
     --secondary-foreground: 231 11% 12%;
     --muted: 230 12% 80%;
     --muted-foreground: 0 0% 100%;
-    --accent: 188 50% 51%;
+    --accent: 215 100% 71%;
     --accent-foreground: 231 11% 12%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 10%;
     --border: 232 11% 60%;
     --input: 230 12% 80%;
-    --ring: 188 50% 60%;
+    --ring: 215 100% 60%;
 
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -143,41 +143,41 @@
     --background-900: 228 10% 90%;
     --background-950: 240 12% 95%;
 
-    --primary-50: 197 28% 5%;
-    --primary-100: 203 25% 10%;
-    --primary-200: 203 25% 20%;
-    --primary-300: 203 25% 30%;
-    --primary-400: 203 26% 40%;
-    --primary-500: 203 26% 50%;
-    --primary-600: 203 26% 60%;
-    --primary-700: 203 25% 70%;
-    --primary-800: 203 25% 80%;
-    --primary-900: 203 25% 90%;
-    --primary-950: 206 28% 95%;
+    --primary-50: 228 20% 5%;
+    --primary-100: 229 22% 10%;
+    --primary-200: 231 20% 20%;
+    --primary-300: 232 20% 30%;
+    --primary-400: 233 20% 40%;
+    --primary-500: 232 20% 50%;
+    --primary-600: 233 20% 60%;
+    --primary-700: 232 20% 70%;
+    --primary-800: 231 20% 80%;
+    --primary-900: 229 22% 90%;
+    --primary-950: 240 20% 95%;
 
-    --secondary-50: 140 36% 5%;
-    --secondary-100: 139 37% 10%;
-    --secondary-200: 138 35% 20%;
-    --secondary-300: 139 36% 30%;
-    --secondary-400: 139 36% 40%;
-    --secondary-500: 139 36% 50%;
-    --secondary-600: 139 36% 60%;
-    --secondary-700: 139 36% 70%;
-    --secondary-800: 138 35% 80%;
-    --secondary-900: 139 37% 90%;
-    --secondary-950: 140 36% 95%;
+    --secondary-50: 220 46% 5%;
+    --secondary-100: 218 49% 10%;
+    --secondary-200: 219 47% 20%;
+    --secondary-300: 218 48% 30%;
+    --secondary-400: 218 48% 40%;
+    --secondary-500: 218 48% 50%;
+    --secondary-600: 218 48% 60%;
+    --secondary-700: 218 48% 70%;
+    --secondary-800: 219 47% 80%;
+    --secondary-900: 218 49% 90%;
+    --secondary-950: 215 46% 95%;
 
-    --accent-50: 189 52% 5%;
-    --accent-100: 187 49% 10%;
-    --accent-200: 188 51% 20%;
-    --accent-300: 188 50% 30%;
-    --accent-400: 188 50% 40%;
-    --accent-500: 188 50% 50%;
-    --accent-600: 188 50% 60%;
-    --accent-700: 188 50% 70%;
-    --accent-800: 188 50% 80%;
-    --accent-900: 187 49% 90%;
-    --accent-950: 189 52% 95%;
+    --accent-50: 215 100% 5%;
+    --accent-100: 215 100% 10%;
+    --accent-200: 215 100% 20%;
+    --accent-300: 215 100% 30%;
+    --accent-400: 215 100% 40%;
+    --accent-500: 215 100% 50%;
+    --accent-600: 215 100% 60%;
+    --accent-700: 215 100% 70%;
+    --accent-800: 215 100% 80%;
+    --accent-900: 215 100% 90%;
+    --accent-950: 215 100% 95%;
   }
 }
 @layer base {
@@ -185,7 +185,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground/85;
   }
 }
 @layer base {

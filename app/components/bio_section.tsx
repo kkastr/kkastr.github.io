@@ -5,7 +5,12 @@ import profile from "~/images/profile.jpg";
 
 export default function BioSection() {
   const description = `Konstantinos is a physicist turned data scientist with a passion for solving complex problems through data-driven insights. Combining his analytical background with expertise in coding and machine learning, he transforms diverse datasets into actionable outcomes. Konstantinos specializes in applying statistical methods, and algorithmic techniques to real-world problems.`;
-
+  const contentLinks = {
+    Resume: "./kastritis_resume.pdf",
+    Github: "https://github.com/kkastr",
+    Linkedin: "https://www.linkedin.com/in/konstantinos-kastritis-269366232/",
+    Research: "https://scholar.google.ca/citations?hl=en&user=lVNtC6cAAAAJ",
+  };
   const resumepdf = "./kastritis_resume.pdf";
   const githubLink = "https://github.com/kkastr";
   const linkedinLink =
@@ -31,26 +36,16 @@ export default function BioSection() {
           </div>
         </div>
         <div className="h-full my-1 flex md:h-1/6 lg:h-1/5 items-center">
-          <Link to={resumepdf} className="w-1/4 mx-2">
-            <Button variant="outline" className="w-full">
-              <p className="text-md md:text-lg drop-shadow-lg"> Resume </p>
-            </Button>
-          </Link>
-          <Link to={githubLink} className="w-1/4 mx-2">
-            <Button variant="outline" className="w-full">
-              <p className="text-md md:text-lg drop-shadow-lg"> Github </p>
-            </Button>
-          </Link>
-          <Link to={linkedinLink} className="w-1/4 mx-2">
-            <Button variant="outline" className="w-full">
-              <p className="text-md md:text-lg drop-shadow-lg"> LinkedIn </p>
-            </Button>
-          </Link>
-          <Link to={gscholarLink} className="w-1/4 mx-2">
-            <Button variant="outline" className="w-full">
-              <p className="text-md md:text-lg drop-shadow-lg"> Research </p>
-            </Button>
-          </Link>
+          {Object.entries(contentLinks).map(([name, url]) => (
+            <Link to={url} className="w-1/4 mx-2">
+              <Button
+                variant="outline"
+                className="w-full hover:text-foreground hover:bg-secondary-500/60"
+              >
+                <p className="text-md md:text-lg drop-shadow-lg"> {name} </p>
+              </Button>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
