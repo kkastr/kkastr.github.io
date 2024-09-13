@@ -63,18 +63,6 @@ export default function FeaturedItem({
     desc_span,
     preview_span,
   } = dirn_opts[direction];
-  // console.log("hi", direction, dirn_opts[direction]);
-  // style={{
-  //   transform: `perspective(1080px) rotateY(${sign}30deg)`,
-  // }}
-  // <Link to={url} target="_blank" rel="noopener noreferrer">
-  //   <Button
-  //     variant="link"
-  //     className="mb-2 text-foreground group-hover:text-primary"
-  //   >
-  //     <GitHubLogoIcon className="mr-2 h-6 w-6" /> Github
-  //   </Button>
-  // </Link>
   return (
     <div className="rounded-md group relative  sm:min-w-full sm:grid sm:grid-rows-auto sm:grid-cols-11 sm:transition-all sm:hover:!opacity-100 sm:group-hover/list:opacity-30">
       <div

@@ -38,7 +38,7 @@ export default function ProjectSection() {
   return (
     <div className="flex flex-col mx-10 mt-5 mb-10 max-sm:max-w-sm md:w-dvw md:max-w-[900px]">
       <h2 className="text-2xl text-center md:text-3xl drop-shadow-2xl border-b border-background-300 mb-8">
-        Featured Work
+        Featured Projects
       </h2>
 
       <ul className="group/list">
