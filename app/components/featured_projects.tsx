@@ -1,5 +1,3 @@
-import { Link } from "@remix-run/react";
-import { Button } from "~/components/ui/button";
 import FeaturedItem from "./featured_item";
 import sentiment_figure from "~/images/sentiment_percent_per_sub.png";
 import stock_figure from "~/images/MSFT_pred.png";
@@ -8,28 +6,26 @@ import bdsim_figure from "~/images/bd_anim.gif";
 const projects = [
   {
     name: "Sentiment Analysis",
-    desc: `Scrape data from reddit using the reddit api and analyze
-    the comment sentiment. Obtain information such as the sentiment breakdown, average sentiment per post, and more.`,
+    desc: `Use sentiment analysis models to extract insights from social media data. This project highlights practical applications of sentiment analysis for real-world datasets, with potential uses in market research, opinion tracking, and social media monitoring. The repository includes data collection from the Reddit API, preprocessing, sentiment classification, and visualization of trends over time.`,
     url: "https://github.com/kkastr/reddit-sentiment/",
     preview: sentiment_figure,
-    tags: ["python", "NLP", "pandas", "sklearn", "pytorch"],
+    tags: ["Python", "NLTK", "API", "Data Mining"],
     index: 0,
   },
   {
     name: "Stock Price Forecast",
-    desc: `Generate predictions for the closing value of securities by using Long Short Term Memory (LSTM) neural networks to model the time series of the stock price.`,
+    desc: `An implementation of LSTM (Long Short-Term Memory) networks to guess potential future stock prices based on historical closing values. The project demonstrates the use of recurrent neural networks for time-series forecasting with financial data. The repository includes data preprocessing steps, model training, and predictions.`,
     url: "https://github.com/kkastr/stock-price-predictions/",
     preview: stock_figure,
-    tags: ["python", "LSTM", "pandas", "time-series"],
+    tags: ["Python", "PyTorch", "LSTM Networks", "Deep Learning"],
     index: 1,
   },
   {
     name: "Brownian Dynamics Simulation",
-    desc: `Brownian dynamics written for gpus, making it easy to
-  scale to tens of thousands of particles for faster results and better statistics on whatever physical system you wish to investigate.`,
+    desc: `Simulate particle motion using CUDA for accelerated parallel processing. A practical application of GPU computing to physics-based simulations, demonstrating both computational efficiency and accuracy. This project highlights the power of CUDA in handling complex physical simulations, which was a reccurent theme in my research.`,
     url: "https://github.com/kkastr/cuda-brownian-dynamics/",
     preview: bdsim_figure,
-    tags: ["CUDA", "python", "physics", "matplotlib"],
+    tags: ["CUDA", "Stochastic Processes", "Physics", "Simulation"],
     index: 2,
   },
 ];

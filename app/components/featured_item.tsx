@@ -64,9 +64,9 @@ export default function FeaturedItem({
     preview_span,
   } = dirn_opts[direction];
   return (
-    <div className="rounded-md group relative  sm:min-w-full sm:grid sm:grid-rows-auto sm:grid-cols-11 sm:transition-all sm:hover:!opacity-100 sm:group-hover/list:opacity-30">
+    <div className="rounded-md group relative sm:min-w-full sm:grid sm:gap-4 sm:grid-rows-auto sm:grid-cols-11 sm:transition-all sm:hover:!opacity-100 sm:group-hover/list:opacity-30">
       <div
-        className={`w-full mb-2 self-center content-center sm:row-start-1 ${preview_span} ${preview_start}`}
+        className={`w-full mb-4 self-center content-center sm:row-start-1 ${preview_span} ${preview_start}`}
       >
         <img
           src={preview}
