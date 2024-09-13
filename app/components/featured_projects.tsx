@@ -12,7 +12,8 @@ const projects = [
     the comment sentiment. Obtain information such as the sentiment breakdown, average sentiment per post, and more.`,
     url: "https://github.com/kkastr/reddit-sentiment/",
     preview: sentiment_figure,
-    tags: ["python", "machine-learning", "pandas", "sklearn", "pytorch"],
+    tags: ["python", "NLP", "pandas", "sklearn", "pytorch"],
+    index: 0,
   },
   {
     name: "Stock Price Forecast",
@@ -20,6 +21,7 @@ const projects = [
     url: "https://github.com/kkastr/stock-price-predictions/",
     preview: stock_figure,
     tags: ["python", "machine-learning", "pandas", "sklearn", "pytorch"],
+    index: 1,
   },
   {
     name: "Brownian Dynamics Simulation",
@@ -28,16 +30,17 @@ const projects = [
     url: "https://github.com/kkastr/cuda-brownian-dynamics/",
     preview: bdsim_figure,
     tags: ["python", "machine-learning", "pandas", "sklearn", "pytorch"],
+    index: 2,
   },
 ];
 
-// TODO: inf scroll? replicate the slide pagination? what to do.
 export default function ProjectSection() {
   return (
-    <div className="flex flex-col mx-10 mt-5 mb-10 max-sm:max-w-sm md:w-dvw md:max-w-4xl">
+    <div className="flex flex-col mx-10 mt-5 mb-10 max-sm:max-w-sm md:w-dvw md:max-w-[900px]">
       <h2 className="text-2xl text-center md:text-3xl drop-shadow-2xl border-b border-background-300 mb-8">
         Featured Work
       </h2>
+
       <ul className="group/list">
         {projects.map((args, index) => (
           <li className="mb-12" key={index}>

@@ -1,11 +1,32 @@
 import { Link } from "@remix-run/react";
+import { Button } from "./ui/button";
 import { Badge } from "~/components/ui/badge";
-interface FeaturedItemProps {
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { SyntheticEvent } from "react";
+
+function ScaleImage(event: SyntheticEvent<HTMLImageElement>) {
+  let image = event.target as HTMLImageElement;
+
+  const aspect_ratio = image.naturalWidth / image.naturalHeight;
+  const nw = (6 * 900) / 12;
+  const diff = nw / aspect_ratio / 300;
+  const rescale = diff > 1 ? (1 / diff).toFixed(2) : 1;
+  // const rotate_css =
+  //   "[transform:_perspective(1080px)_scale()_rotateY(-30deg)]";
+
+  image.style.setProperty(
+    "transform",
+    `perspective(1080px) scale(${rescale}) rotateY(-30deg)`
+  );
+}
+
+interface Params {
   name: string;
   desc: string;
   url: string;
   preview: string;
   tags: string[];
+  index: number;
 }
 export default function FeaturedItem({
   name,
@@ -13,37 +34,52 @@ export default function FeaturedItem({
   url,
   preview,
   tags,
-}: FeaturedItemProps) {
+  index,
+}: Params) {
+  let direction = index % 2;
+  let text_start_col = direction ? "sm:col-start-6" : "sm:col-start-1";
+  let preview_start_col = direction ? "sm:col-start-1" : "sm:col-end-13";
   return (
-    <Link to={url}>
-      <div className="group relative grid sm:grid-cols-8 sm:gap-6 sm: min-w-full h-full border-0 transition-all md:hover:!opacity-100 md:group-hover/list:opacity-30 rounded-md">
-        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:block md:group-hover:bg-background-200 md:group-hover:shadow-white/10 md:group-hover:drop-shadow-lg"></div>
-        <img
-          src={preview}
-          alt="BD sim"
-          className="z-10 sm:col-span-4 rounded-md border-background-200 justify-self-center place-self-center"
-        />
-        <div className="sm:col-span-4 flex flex-col h-full z-10">
-          <div className="w-full my-6 p-0 flex flex-col justify-center items-center">
-            <h3 className="group-hover:before:block group-hover:before:absolute group-hover:before:-inset-1 group-hover:before:-skew-y-3 before:bg-primary group-hover:before:bg-secondary-500/60 relative inline-block">
-              <span className="text-xl md:text-2xl relative">{name}</span>
-            </h3>
-          </div>
-          <p className="w-full my-6 text-pretty text-md tracking-tight md:text-lg drop-shadow-lg">
+    <div className=" rounded-md group relative grid sm:grid-rows-auto sm:grid-cols-12 sm:gap-2 sm:min-w-full h-[300px] border-0 transition-all md:hover:!opacity-100 md:group-hover/list:opacity-30">
+      <div
+        className={`sm:row-start-1 ${text_start_col} sm:col-span-7 self-center relative`}
+      >
+        <h3 className=" mb-2 text-justify text-pretty font-semibold text-lg sm:text-xl">
+          {name}
+        </h3>
+        <Link to={url} target="_blank" rel="noopener noreferrer">
+          <Button variant="link" className="mb-2">
+            <GitHubLogoIcon className="mr-2 h-6 w-6" /> Github
+          </Button>
+        </Link>
+        <div className="bg-background-200/80 rounded-md p-6 mb-4">
+          <p className="text-justify text-pretty text-base sm:text-lg y">
             {desc}
           </p>
-          <div className="my-3 flex items-center justify-around">
-            {tags.map((item, index) => (
-              <Badge
-                key={index}
-                className="mx-1 bg-background-200 group-hover:bg-secondary-500/60 px-3 py-1 rounded-full"
-              >
-                {item}
-              </Badge>
-            ))}
-          </div>
+        </div>
+        <div className="mb-4">
+          {tags.map((item, index) => (
+            <Badge
+              key={index}
+              variant="outline"
+              className="mx-2 text-foreground/70 sm:ring-1 rounded-full"
+            >
+              {item}
+            </Badge>
+          ))}
         </div>
       </div>
-    </Link>
+
+      <div
+        className={`sm:col-span-6 sm:row-start-1  ${preview_start_col} self-center`}
+      >
+        <img
+          src={preview}
+          alt="card"
+          onLoad={ScaleImage}
+          className="shadow shadow-white/20 rounded-md max-h-[300px]"
+        />
+      </div>
+    </div>
   );
 }

@@ -4,22 +4,16 @@ import { Button } from "~/components/ui/button";
 import profile from "~/images/profile.jpg";
 
 export default function BioSection() {
-  const description = `Konstantinos is a physicist turned data scientist with a passion for solving complex problems through data-driven insights. Combining his analytical background with expertise in coding and machine learning, he transforms diverse datasets into actionable outcomes. Konstantinos specializes in applying statistical methods, and algorithmic techniques to real-world problems.`;
+  const description = `I'm a physicist turned data scientist with a deep interest in using data to solve practical problems. I enjoy working with complex datasets and using my analytical background along with coding and machine learning to uncover meaningful insights. I'm always learning and exploring new tools to improve my skills.`;
   const contentLinks = {
     Resume: "./kastritis_resume.pdf",
     Github: "https://github.com/kkastr",
     Linkedin: "https://www.linkedin.com/in/konstantinos-kastritis-269366232/",
     Research: "https://scholar.google.ca/citations?hl=en&user=lVNtC6cAAAAJ",
   };
-  const resumepdf = "./kastritis_resume.pdf";
-  const githubLink = "https://github.com/kkastr";
-  const linkedinLink =
-    "https://www.linkedin.com/in/konstantinos-kastritis-269366232/";
-  const gscholarLink =
-    "https://scholar.google.ca/citations?hl=en&user=lVNtC6cAAAAJ";
 
   return (
-    <div className="flex flex-col justify-between mx-10 my-5 md:flex-row md:max-w-4xl">
+    <div className="flex flex-col items-center mx-10 my-5 md:flex-row md:max-w-4xl">
       <div className="flex justify-center w-full md:w-1/3">
         <img
           src={profile}
@@ -29,20 +23,26 @@ export default function BioSection() {
       </div>
       <div className="w-full my-2 md:w-2/3  md:flex-col m-2">
         <div className="h-full md:h-5/6 lg:h-4/5 flex">
-          <div className="bg-background-200 rounded-md shadow">
-            <p className="text-balance text-base md:text-lg lg:text-lg drop-shadow-lg m-3">
+          <div className="rounded-md shadow">
+            <p className="text-pretty text-justify text-base sm:text-lg m-3">
               {description}
             </p>
           </div>
         </div>
         <div className="h-full my-1 flex md:h-1/6 lg:h-1/5 items-center">
           {Object.entries(contentLinks).map(([name, url]) => (
-            <Link to={url} className="w-1/4 mx-2">
+            <Link
+              to={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-1/4 mx-2"
+              key={name}
+            >
               <Button
                 variant="outline"
-                className="w-full hover:text-foreground hover:bg-secondary-500/60"
+                className="w-full bg-primary/60 ring-0 sm:ring-1 sm:bg-background hover:text-foreground hover:bg-primary/70"
               >
-                <p className="text-md md:text-lg drop-shadow-lg"> {name} </p>
+                <p className="text-md sm:text-base drop-shadow-lg"> {name} </p>
               </Button>
             </Link>
           ))}
