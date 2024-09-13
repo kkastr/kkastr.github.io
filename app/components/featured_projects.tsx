@@ -20,7 +20,7 @@ const projects = [
     desc: `Generate predictions for the closing value of securities by using Long Short Term Memory (LSTM) neural networks to model the time series of the stock price.`,
     url: "https://github.com/kkastr/stock-price-predictions/",
     preview: stock_figure,
-    tags: ["python", "machine-learning", "pandas", "sklearn", "pytorch"],
+    tags: ["python", "LSTM", "pandas", "time-series"],
     index: 1,
   },
   {
@@ -29,7 +29,7 @@ const projects = [
   scale to tens of thousands of particles for faster results and better statistics on whatever physical system you wish to investigate.`,
     url: "https://github.com/kkastr/cuda-brownian-dynamics/",
     preview: bdsim_figure,
-    tags: ["python", "machine-learning", "pandas", "sklearn", "pytorch"],
+    tags: ["CUDA", "python", "physics", "matplotlib"],
     index: 2,
   },
 ];

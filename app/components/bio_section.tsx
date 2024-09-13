@@ -40,7 +40,7 @@ export default function BioSection() {
             >
               <Button
                 variant="outline"
-                className="w-full bg-primary/60 ring-0 sm:ring-1 sm:bg-background hover:text-foreground hover:bg-primary/70"
+                className="w-full bg-primary/50 ring-0 lg:ring-1 lg:bg-background lg:hover:text-foreground lg:hover:bg-primary/70"
               >
                 <p className="text-md sm:text-base drop-shadow-lg"> {name} </p>
               </Button>
