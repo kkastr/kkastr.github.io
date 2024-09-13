@@ -2,6 +2,7 @@ import FeaturedItem from "./featured_item";
 import sentiment_figure from "~/images/sentiment_percent_per_sub.png";
 import stock_figure from "~/images/MSFT_pred.png";
 import bdsim_figure from "~/images/bd_anim.gif";
+import website_figure from "~/images/website_project_image.png";
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
     desc: `Use sentiment analysis models to extract insights from social media data. This project highlights practical applications of sentiment analysis for real-world datasets, with potential uses in market research, opinion tracking, and social media monitoring. The repository includes data collection from the Reddit API, preprocessing, sentiment classification, and visualization of trends over time.`,
     url: "https://github.com/kkastr/reddit-sentiment/",
     preview: sentiment_figure,
-    tags: ["Python", "NLTK", "API", "Data Mining"],
+    tags: ["Python", "NLTK", "API", "Data Mining", "Visualization"],
     index: 0,
   },
   {
@@ -25,8 +26,16 @@ const projects = [
     desc: `Simulate particle motion using CUDA for accelerated parallel processing. A practical application of GPU computing to physics-based simulations, demonstrating both computational efficiency and accuracy. This project highlights the power of CUDA in handling complex physical simulations, which was a reccurent theme in my research.`,
     url: "https://github.com/kkastr/cuda-brownian-dynamics/",
     preview: bdsim_figure,
-    tags: ["CUDA", "Stochastic Processes", "Physics", "Simulation"],
+    tags: ["CUDA", "Stochastic Processes", "Physics", "Data Analysis"],
     index: 2,
+  },
+  {
+    name: "kkastr.github.io",
+    desc: `Personal portfolio website using GitHub Pages deployed through Github Actions with CI/CD. The website is designed to showcase various projects and skills, acting as a digital portfolio. Aiming for a responsive user experience the site is built using typescript, react, and tailwindcss.`,
+    url: "https://github.com/kkastr/kkastr.github.io/",
+    preview: website_figure,
+    tags: ["Typescript", "React", "Remix", "Tailwindcss", "CI/CD"],
+    index: 3,
   },
 ];
 
