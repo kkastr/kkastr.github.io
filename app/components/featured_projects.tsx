@@ -7,7 +7,7 @@ import website_figure from "~/images/website_project_image.png";
 const projects = [
   {
     name: "Sentiment Analysis",
-    desc: `Use sentiment analysis models to extract insights from social media data. This project highlights practical applications of sentiment analysis for real-world datasets, with potential uses in market research, opinion tracking, and social media monitoring. The repository includes data collection from the Reddit API, preprocessing, sentiment classification, and visualization of trends over time.`,
+    desc: `Use sentiment analysis models to extract insights from social media data. Visualize the impact of opinions on engagement. The repository includes data collection from the Reddit API, preprocessing, sentiment classification, and visualization of trends over time.`,
     url: "https://github.com/kkastr/reddit-sentiment/",
     preview: sentiment_figure,
     tags: ["Python", "NLTK", "API", "Data Mining", "Visualization"],
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     name: "Stock Price Forecast",
-    desc: `An implementation of LSTM (Long Short-Term Memory) networks to guess potential future stock prices based on historical closing values. The project demonstrates the use of recurrent neural networks for time-series forecasting with financial data. The repository includes data preprocessing steps, model training, and predictions.`,
+    desc: `An implementation of LSTM (Long Short-Term Memory) networks to guess potential future stock prices based on historical closing values. The repository includes data preprocessing steps, model training, and predictions.`,
     url: "https://github.com/kkastr/stock-price-predictions/",
     preview: stock_figure,
     tags: ["Python", "PyTorch", "LSTM Networks", "Deep Learning"],
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: "Brownian Dynamics Simulation",
-    desc: `Simulate particle motion using CUDA for accelerated parallel processing. A practical application of GPU computing to physics-based simulations, demonstrating both computational efficiency and accuracy. This project highlights the power of CUDA in handling complex physical simulations, which was a reccurent theme in my research.`,
+    desc: `Simulate particle motion using CUDA for accelerated parallel processing. A practical application of GPU computing to physics-based simulations, demonstrating both computational efficiency and accuracy.`,
     url: "https://github.com/kkastr/cuda-brownian-dynamics/",
     preview: bdsim_figure,
     tags: ["CUDA", "Stochastic Processes", "Physics", "Data Analysis"],

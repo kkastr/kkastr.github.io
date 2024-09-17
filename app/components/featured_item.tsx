@@ -27,6 +27,7 @@ const dirn_opts = [
     text_dirn: "sm:text-left",
     desc_span: "sm:col-span-7",
     preview_span: "sm:col-span-6",
+    txtbox_pad: "sm: pr-12",
   },
   {
     slant: "[transform:perspective(1080px)_rotateY(30deg)]",
@@ -35,6 +36,7 @@ const dirn_opts = [
     text_dirn: "sm:text-right",
     desc_span: "sm:col-span-6",
     preview_span: "sm:col-span-7",
+    txtbox_pad: "sm: pl-12",
   },
 ];
 
@@ -62,6 +64,7 @@ export default function FeaturedItem({
     text_dirn,
     desc_span,
     preview_span,
+    txtbox_pad,
   } = dirn_opts[direction];
   return (
     <div className="rounded-md group relative sm:min-w-full sm:grid sm:gap-4 sm:grid-rows-auto sm:grid-cols-11 sm:transition-all sm:hover:!opacity-100 sm:group-hover/list:opacity-30">
@@ -71,7 +74,7 @@ export default function FeaturedItem({
         <img
           src={preview}
           alt="card"
-          className={`shadow shadow-white/20 rounded-md max-h-[300px] w-full sm:object-fill max-sm:transform-none ${slant}`}
+          className={`shadow shadow-white/20 rounded-md max-h-[300px] w-full sm:object-fill max-sm:transform-none ${slant} group-hover:scale-90`}
         />
       </div>
       <div
@@ -89,7 +92,9 @@ export default function FeaturedItem({
             Github
           </Button>
         </Link>
-        <div className="bg-background-200/80 rounded-md p-6 mb-4">
+        <div
+          className={`bg-background-200/80 rounded-md p-6 ${txtbox_pad} mb-4`}
+        >
           <p className="text-pretty text-base sm:text-lg">{desc}</p>
         </div>
         <div className="mb-4">
