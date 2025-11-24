@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import profile from "~/images/profile.jpg";
 import { FaGithub, FaLinkedin, FaGoogleScholar } from "react-icons/fa6";
 import { TbFileCv } from "react-icons/tb";

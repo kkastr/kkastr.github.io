@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { useState } from "react";
 import { Badge } from "~/components/ui/badge";
 import { GitHubLogoIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
@@ -66,7 +66,7 @@ export default function FeaturedItem({
 			<div
 				className={`p-2 bg-gradient-to-t ${
 					direction ? "sm:bg-gradient-to-l" : "sm:bg-gradient-to-r"
-				} from-background-200 hover:from-primary/40 rounded-md group relative grid gap-y-2 sm:min-w-full sm:p-0 sm:gap-0 sm:grid-flow-row sm:auto-rows-fr sm:grid-col-flow sm:items-center sm:transition-all sm:hover:!opacity-100 sm:group-hover/list:opacity-30`}
+				} from-background-200 hover:from-primary/40 rounded-md group relative grid gap-y-2 sm:min-w-full sm:p-0 sm:gap-0 sm:grid-flow-row sm:auto-rows-fr sm:grid-flow-col sm:items-center sm:transition-all sm:hover:!opacity-100 sm:group-hover/list:opacity-30`}
 			>
 				<div className={` sm:row-start-1 sm:row-span-3 ${preview_start}`}>
 					<img

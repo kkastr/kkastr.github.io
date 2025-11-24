@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "react-router";
 import ProfileHeader from "~/components/profile_header";
 import BioSection from "~/components/bio_section";
 import ProjectSection from "~/components/featured_projects";
