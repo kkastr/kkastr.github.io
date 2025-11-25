@@ -1,0 +1,88 @@
+Konstantinos Kastritis
+Data Scientist | Software Developer (ML)
+(905) 960-1970 · konst.kastritis@gmail.com
+https://kastritis.dev · https://github.com/kkastr · https://linkedin.com/in/konstantinos-kastritis/
+
+PROFILE
+Data scientist and software developer building LLM-based applications, predictive models, and research-grade
+simulations. Strong in Python, scientific computing, and machine learning with practical experience designing
+end-to-end data pipelines, model development, and deployment.
+
+SKILLS
+Programming: Python, C, C++, TypeScript, SQL, CUDA
+ML / Data: NumPy, Pandas, SciPy, scikit-learn, PyTorch, Matplotlib, Plotly
+LLM / Systems: Context and prompt engineering (system instructions, JSON-structured outputs), multi-model
+orchestration and agentic workflows
+Backend: FastAPI, WebSockets
+Frontend: React, Tailwind
+DevOps: Git, Linux, Docker, GitHub Actions
+
+EXPERIENCE
+Synecho – Founder & Lead Developer
+Jun 2025 – Present · Remote | https://synecho.app
+• Launched a SaaS that analyzes variation in LLM outputs so users can track shifts in brand/topic perception
+across repeated prompts.
+• Built a React/Tailwind UI with a prompt workflow and dashboard for statistics, judge summaries, and
+per-request prompt–response transcripts.
+• Implemented a Python/FastAPI backend coordinating async, parallel calls to Gemini, Groq, and OpenAI,
+aggregating outputs into quantitative metrics (similarity, sentiment, term/phrase statistics).
+• Designed an LLM-as-judge layer using system instructions and JSON-structured outputs to produce reliable
+summaries and constrain hallucinations.
+• Orchestrated a multi-step, agentic LLM workflow (candidate models + judge model) to aggregate, score, and
+summarize responses into actionable insights.
+• Improved perceived latency with concurrent API requests and WebSocket streaming for judge output;
+deployed on a VPS with SQLite and CI/CD via GitHub Actions.
+Researcher – Ontario Tech University
+Jun 2024 – Nov 2024
+• Extended physics simulation software (Python/C++), enabling new experiment types and parameter sweeps.
+• Analyzed simulation and experimental datasets with Python (NumPy/Pandas), generating plots and metrics
+for publication.
+• Drafted manuscript sections and figures for peer-reviewed journals, validating results with statistical methods.
+• Contributed to research discussions, proposing data-driven approaches to modeling and analysis.
+Researcher – Ontario Tech University
+Sep 2021 – Jun 2022
+• Built data pipelines in Python to ingest, clean, and store simulation outputs, improving storage efficiency.
+• Defined metrics to quantify experimental/simulation behavior, reducing data collection overhead.
+• Enhanced simulation tooling to automate batch runs and post-processing, enabling more complex studies.
+• Provided technical guidance to graduate students on data analysis and scripting.
+
+Graduate Research & Teaching Assistant – Ontario Tech University
+Jan 2015 – Dec 2020
+• Developed C++/CUDA APIs for GPU-capable simulation software, increasing performance by ~50% and
+enabling faster simulation studies.
+• Provided data-driven and theoretical insights to experimental collaborators and co-authored two
+peer-reviewed publications based on combined simulation and experimental results.
+• Supported group migration to GPU computing; wrote documentation and trained six students in custom
+simulation tools.
+• Led labs and tutorials for physics and computer science courses (quantum mechanics, Linux, Python
+programming).
+• Taught ~50 students per term core skills in Linux, Python, file system management, and data visualization.
+
+SELECTED PROJECTS
+Polymer Conformation Generation (https://alysides.kastritis.dev) | PyTorch, Transformers, FastAPI, React
+• Trained a transformer model on MD simulation data of coarse-grained semiflexible polymers to learn the
+equilibrium distribution of bond vectors and chain conformations.
+• Used the model to sample near-equilibrated chains as MD starting states, reducing the need for long
+thermalization runs whose relaxation time grows at least quadratically with chain length.
+• Built an interactive FastAPI + React web app where users select chain length (within limits for performance),
+generate sample conformations on demand, and inspect basic configuration statistics.
+Social Media Sentiment Analysis | Python, SQL, scikit-learn, PRAW, Plotly
+• Scraped posts and comments from five subreddits with PRAW and stored 25,000+ comments in a SQL
+database via Pandas.
+• Trained a scikit-learn classifier for sentiment analysis, achieving 86% accuracy on held-out data.
+• Built a dashboard with six key metrics (sentiment by subreddit, comment volume over time, etc.) to explore
+Reddit user behavior.
+
+EDUCATION
+Ontario Tech University – M.Sc., Materials Science | Aug 2019
+Thesis: Computational Studies of Semiflexible Polymer Dynamics Under Confinement
+Ontario Tech University – B.Sc., Physics | Dec 2016
+Thesis: N-Body Simulations of Dark Matter Halos
+
+AWARDS
+NSERC Undergraduate Research Award
+
+LANGUAGES
+English (fluent), Greek (fluent)
+
+
