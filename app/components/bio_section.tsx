@@ -12,13 +12,7 @@ export default function BioSection() {
       primary: true,
     },
     {
-      label: "Email Me",
-      href: "mailto:konst.kastritis@gmail.com",
-      newTab: false,
-      primary: false,
-    },
-    {
-      label: "Code Samples (GitHub)",
+      label: "GitHub",
       href: "https://github.com/kkastr",
       newTab: true,
       primary: false,
@@ -26,8 +20,8 @@ export default function BioSection() {
   ];
 
   return (
-    <section className="mb-10 grid w-full max-w-[900px] gap-5 border-y border-background-300/70 py-6 px-4 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-x-8">
-      <div className="space-y-4 sm:order-1">
+    <section className="mb-10 grid w-full max-w-[900px] gap-5 border-y border-background-300/70 py-6 px-4 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-8">
+      <div className="space-y-4 sm:order-2">
         <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-foreground/60">
           Profile
         </p>
@@ -53,7 +47,7 @@ export default function BioSection() {
           ))}
         </div>
       </div>
-      <div className="sm:order-2">
+      <div className="sm:order-1">
         <img
           src={profile}
           alt="Portrait of Konstantinos Kastritis"
