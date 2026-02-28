@@ -81,16 +81,21 @@ const projects = [
 export default function ProjectSection() {
   return (
     <section className="flex w-full max-w-[900px] flex-col px-4">
-      <h2 className="mb-2 border-b border-background-300 pb-2 text-center text-2xl lg:text-3xl">
-        Selected Projects
-      </h2>
-      <p className="mb-6 text-center text-sm text-foreground/70 md:text-base">
-        Production-focused ML and data work, from research prototypes to
-        deployed apps.
-      </p>
-      <ul className="space-y-6">
+      <div className="mb-6 border-b border-background-300/70 pb-3">
+        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-foreground/60">
+          Selected Work
+        </p>
+        <h2 className="font-editorial mt-2 text-3xl/tight md:text-4xl/tight">
+          Projects
+        </h2>
+        <p className="mt-2 text-sm text-foreground/70 md:text-base">
+          Production-focused ML and data work, from research prototypes to
+          deployed apps.
+        </p>
+      </div>
+      <ul className="divide-y divide-background-300/65 border-y border-background-300/65">
         {projects.map((project, index) => (
-          <li key={project.name}>
+          <li key={project.name} className="py-6">
             <FeaturedItem {...project} index={index} />
           </li>
         ))}

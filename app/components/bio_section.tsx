@@ -1,4 +1,3 @@
-import { Button } from "~/components/ui/button";
 import profile from "~/images/profile_professional.jpg";
 
 export default function BioSection() {
@@ -10,53 +9,60 @@ export default function BioSection() {
       label: "Download Resume",
       href: "/kastritis_resume.pdf",
       newTab: true,
-      variant: "default" as const,
+      primary: true,
     },
     {
       label: "Email Me",
       href: "mailto:konst.kastritis@gmail.com",
       newTab: false,
-      variant: "outline" as const,
+      primary: false,
     },
     {
       label: "Code Samples (GitHub)",
       href: "https://github.com/kkastr",
       newTab: true,
-      variant: "ghost" as const,
+      primary: false,
     },
   ];
 
   return (
-    <section className="mb-8 grid w-full max-w-[900px] gap-4 px-4 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-6 md:gap-x-8">
-      <div>
+    <section className="mb-10 grid w-full max-w-[900px] gap-5 border-y border-background-300/70 py-6 px-4 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-x-8">
+      <div className="space-y-4 sm:order-1">
+        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-foreground/60">
+          Profile
+        </p>
+        <p className="text-pretty text-base text-foreground/88 md:text-lg">
+          {description}
+        </p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm md:text-base">
+          {quickLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.newTab ? "_blank" : undefined}
+              rel={link.newTab ? "noopener noreferrer" : undefined}
+              aria-label={link.label}
+              className={
+                link.primary
+                  ? "font-semibold text-primary underline decoration-primary/50 underline-offset-4 transition-colors hover:text-accent"
+                  : "text-foreground/80 underline decoration-foreground/35 underline-offset-4 transition-colors hover:text-foreground"
+              }
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+      <div className="sm:order-2">
         <img
           src={profile}
           alt="Portrait of Konstantinos Kastritis"
-          className="size-36 rounded-lg object-cover sm:size-44"
+          className="size-40 rounded-sm border border-background-300 object-cover sm:size-48"
           width={512}
           height={650}
           loading="eager"
           decoding="async"
         />
-      </div>
-      <div className="space-y-4">
-        <p className="text-pretty text-base text-foreground/90 md:text-lg">
-          {description}
-        </p>
-        <div className="flex flex-wrap gap-3">
-          {quickLinks.map((link) => (
-            <Button asChild key={link.label} variant={link.variant}>
-              <a
-                href={link.href}
-                target={link.newTab ? "_blank" : undefined}
-                rel={link.newTab ? "noopener noreferrer" : undefined}
-                aria-label={link.label}
-              >
-                {link.label}
-              </a>
-            </Button>
-          ))}
-        </div>
       </div>
     </section>
   );
