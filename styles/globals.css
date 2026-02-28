@@ -194,12 +194,6 @@
     );
   }
 }
-@layer utilities {
-  .font-editorial {
-    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
-      "Times New Roman", Times, serif;
-  }
-}
 @layer base {
   @font-face {
     font-family: "Roboto";

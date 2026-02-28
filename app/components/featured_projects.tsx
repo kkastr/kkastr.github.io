@@ -83,9 +83,9 @@ export default function ProjectSection() {
     <section className="flex w-full max-w-[900px] flex-col px-4">
       <div className="mb-6 border-b border-background-300/70 pb-3">
         <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-foreground/60">
-          Selected Work
+          Case Studies
         </p>
-        <h2 className="font-editorial mt-2 text-3xl/tight md:text-4xl/tight">
+        <h2 className="mt-2 text-3xl/tight font-semibold md:text-4xl/tight">
           Projects
         </h2>
         <p className="mt-2 text-sm text-foreground/70 md:text-base">
@@ -93,9 +93,9 @@ export default function ProjectSection() {
           deployed apps.
         </p>
       </div>
-      <ul className="divide-y divide-background-300/65 border-y border-background-300/65">
+      <ul className="space-y-4">
         {projects.map((project, index) => (
-          <li key={project.name} className="py-6">
+          <li key={project.name}>
             <FeaturedItem {...project} index={index} />
           </li>
         ))}
