@@ -1,10 +1,10 @@
 import FeaturedItem from "./featured_item";
-import sentiment_figure from "~/images/sentiment_percent_per_sub.png";
-import stock_figure from "~/images/MSFT_pred.png";
-import bdsim_figure from "~/images/bd_image.png";
-import website_figure from "~/images/website_project_image.png";
-import synecho_figure from "~/images/synecho_portfolio_image.png";
-import alysides_figure from "~/images/alysides_portfolio_image.png";
+import sentiment_figure from "~/images/sentiment_percent_per_sub.webp";
+import stock_figure from "~/images/MSFT_pred.webp";
+import bdsim_figure from "~/images/bd_image.webp";
+import website_figure from "~/images/website_project_image.webp";
+import synecho_figure from "~/images/synecho_portfolio_image.webp";
+import alysides_figure from "~/images/alysides_portfolio_image.webp";
 
 const projects = [
   {
@@ -34,14 +34,13 @@ const projects = [
   {
     name: "Portfolio Website",
     desc: "Built a portfolio site with React Router and Tailwind, deployed on GitHub Pages.",
-    impact:
-      "Automated commit-to-production deploys with GitHub Actions.",
+    impact: "Automated commit-to-production deploys with CI/CD.",
     liveUrl: "https://kastritis.dev",
     sourceUrl: "https://github.com/kkastr/kkastr.github.io/",
     preview: website_figure,
     previewWidth: 560,
     previewHeight: 360,
-    tags: ["TypeScript", "React", "Tailwind", "GitHub Actions", "CI/CD"],
+    tags: ["TypeScript", "React", "Tailwind", "CI/CD", "GitHub Pages"],
   },
   {
     name: "Social Media Sentiment Analysis",

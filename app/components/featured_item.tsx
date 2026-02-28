@@ -66,7 +66,7 @@ export default function FeaturedItem({
                 rel="noopener noreferrer"
                 className="text-primary underline decoration-primary/45 underline-offset-4 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                Live Demo
+                Live
               </a>
             ) : null}
             {sourceUrl ? (
@@ -76,7 +76,7 @@ export default function FeaturedItem({
                 rel="noopener noreferrer"
                 className="text-foreground/80 underline decoration-foreground/35 underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                Source Code
+                GitHub
               </a>
             ) : null}
             {!sourceUrl && sourcePrivate ? (
@@ -84,7 +84,7 @@ export default function FeaturedItem({
                 className="text-foreground/65"
                 title="Source repository is private"
               >
-                Private Source
+                Private
               </span>
             ) : null}
           </div>
