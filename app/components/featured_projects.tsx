@@ -7,74 +7,94 @@ import synecho_figure from "~/images/synecho_portfolio_image.png";
 import alysides_figure from "~/images/alysides_portfolio_image.png";
 
 const projects = [
-    {
-        name: "Synecho",
-        desc: `SaaS web app that measures variation in LLM outputs across repeated prompts. Runs multiple model providers in parallel and uses an LLM-as-judge to summarize results and compute similarity, sentiment, and term/phrase statistics in a React/FastAPI interface.`,
-        url: "https://synecho.app",
-        preview: synecho_figure,
-        tags: [
-            "LLM Evaluation",
-            "Orchestration",
-            "Agentic Workflows",
-            "DevOps",
-        ],
-        index: 0,
-    },
-    {
-        name: "Alysides",
-        desc: `Interactive tool for generating near-equilibrated semiflexible polymer conformations from a transformer trained on molecular-dynamics data, with on-demand sampling by chain length and basic configuration statistics.`,
-        url: "https://alysides.kastritis.dev",
-        preview: alysides_figure,
-        tags: ["PyTorch", "Transformers", "Deep Learning"],
-        index: 1,
-    },
-    {
-        name: "kkastr.github.io",
-        desc: `Personal portfolio website using GitHub Pages deployed with Github Actions CI/CD. Built using typescript, react, and tailwindcss, with a focus on responsive UX`,
-        url: "https://github.com/kkastr/kkastr.github.io/",
-        preview: website_figure,
-        tags: ["Typescript", "React", "Remix", "Tailwindcss", "CI/CD"],
-        index: 2,
-    },
-    {
-        name: "Sentiment Analysis",
-        desc: `Extract insights from social media data and capture the impact of opinions on engagement. Collect data from the Reddit API, analyze comment sentiment based on keywords, and visualize trends over time.`,
-        url: "https://github.com/kkastr/reddit-sentiment/",
-        preview: sentiment_figure,
-        tags: ["Python", "NLTK", "API", "Data Mining", "Visualization"],
-        index: 3,
-    },
-    {
-        name: "Stock Price Forecast",
-        desc: `An implementation of LSTM (Long Short-Term Memory) networks to model the fluctuations of stock prices based on historical closing values.`,
-        url: "https://github.com/kkastr/stock-price-predictions/",
-        preview: stock_figure,
-        tags: ["Python", "PyTorch", "LSTM Networks", "Deep Learning"],
-        index: 4,
-    },
-    {
-        name: "Brownian Dynamics Simulation",
-        desc: `Simulate particle motion using CUDA for accelerated parallel processing. A practical application of GPU computing to simulations of physics systems.`,
-        url: "https://github.com/kkastr/cuda-brownian-dynamics/",
-        preview: bdsim_figure,
-        tags: ["CUDA", "Stochastic Processes", "Physics", "Data Analysis"],
-        index: 5,
-    },
+  {
+    name: "Synecho",
+    desc: "Built a SaaS app to measure LLM output variability across repeated prompts.",
+    impact:
+      "Enabled side-by-side model evaluation with parallel calls, websocket streaming, and judge-based summaries.",
+    liveUrl: "https://synecho.app",
+    sourcePrivate: true,
+    preview: synecho_figure,
+    previewWidth: 1914,
+    previewHeight: 912,
+    tags: ["LLM Evaluation", "FastAPI", "React", "WebSockets", "Docker"],
+  },
+  {
+    name: "Alysides",
+    desc: "Built a web app to sample near-equilibrated polymer conformations from a transformer trained on molecular dynamics trajectories.",
+    impact:
+      "Enabled on-demand generation with quick visual inspection and configuration statistics.",
+    liveUrl: "https://alysides.kastritis.dev",
+    sourcePrivate: true,
+    preview: alysides_figure,
+    previewWidth: 1872,
+    previewHeight: 865,
+    tags: ["PyTorch", "Transformers", "FastAPI", "React", "Scientific ML"],
+  },
+  {
+    name: "Portfolio Website",
+    desc: "Built a portfolio site with React Router and Tailwind, deployed on GitHub Pages.",
+    impact:
+      "Automated commit-to-production deploys with GitHub Actions.",
+    liveUrl: "https://kastritis.dev",
+    sourceUrl: "https://github.com/kkastr/kkastr.github.io/",
+    preview: website_figure,
+    previewWidth: 560,
+    previewHeight: 360,
+    tags: ["TypeScript", "React", "Tailwind", "GitHub Actions", "CI/CD"],
+  },
+  {
+    name: "Social Media Sentiment Analysis",
+    desc: "Built a Reddit sentiment pipeline for scraping, labeling, model training, and visualization.",
+    impact:
+      "Processed 25,000+ comments and reached 86% held-out accuracy.",
+    sourceUrl: "https://github.com/kkastr/reddit-sentiment/",
+    preview: sentiment_figure,
+    previewWidth: 400,
+    previewHeight: 300,
+    tags: ["Python", "scikit-learn", "NLP", "Plotly", "Data Pipeline"],
+  },
+  {
+    name: "Stock Price Forecast",
+    desc: "Built an LSTM time-series model for short-horizon stock price forecasting.",
+    impact:
+      "Implemented end-to-end data preparation, training, and evaluation for sequence modeling.",
+    sourceUrl: "https://github.com/kkastr/stock-price-predictions/",
+    preview: stock_figure,
+    previewWidth: 560,
+    previewHeight: 240,
+    tags: ["Python", "PyTorch", "LSTM", "Time Series"],
+  },
+  {
+    name: "Brownian Dynamics Simulation",
+    desc: "Built a CUDA toolkit for Brownian dynamics and stochastic particle simulations.",
+    impact:
+      "Accelerated simulation-heavy experiments with GPU-parallel kernels.",
+    sourceUrl: "https://github.com/kkastr/cuda-brownian-dynamics/",
+    preview: bdsim_figure,
+    previewWidth: 1196,
+    previewHeight: 670,
+    tags: ["CUDA", "C++", "Simulation", "Physics", "Numerical Methods"],
+  },
 ];
 
 export default function ProjectSection() {
-    return (
-        <div className="flex flex-col sm:mx-4 max-sm:max-w-sm md:w-dvw md:max-w-[900px]">
-            <h2 className="text-2xl text-center mb-4 lg:text-3xl drop-shadow-2xl border-b border-background-300">
-                Featured Projects
-            </h2>
-            <ul className="group/list">
-                {projects.map((args, index) => (
-                    <li className="mb-8" key={index}>
-                        <FeaturedItem {...args} />
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+  return (
+    <section className="flex w-full max-w-[900px] flex-col px-4">
+      <h2 className="mb-2 border-b border-background-300 pb-2 text-center text-2xl lg:text-3xl">
+        Selected Projects
+      </h2>
+      <p className="mb-6 text-center text-sm text-foreground/70 md:text-base">
+        Production-focused ML and data work, from research prototypes to
+        deployed apps.
+      </p>
+      <ul className="space-y-6">
+        {projects.map((project, index) => (
+          <li key={project.name}>
+            <FeaturedItem {...project} index={index} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }

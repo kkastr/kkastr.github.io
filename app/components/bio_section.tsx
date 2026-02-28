@@ -1,53 +1,63 @@
-import { Link } from "react-router";
-import profile from "~/images/profile_edited.png";
-import { FaGithub, FaLinkedin, FaGoogleScholar } from "react-icons/fa6";
-import { TbFileCv } from "react-icons/tb";
+import { Button } from "~/components/ui/button";
+import profile from "~/images/profile_professional.jpg";
 
 export default function BioSection() {
-    const description = `As a physicist turned data scientist, I apply data-driven methods to solve real-world problems. I excel in analyzing complex datasets, leveraging my analytical background, programming skills, and machine learning expertise to derive actionable insights.`;
-    const contentLinks = {
-        Resume: { icon: TbFileCv, url: "./kastritis_resume.pdf" },
-        Github: { icon: FaGithub, url: "https://github.com/kkastr" },
-        Linkedin: {
-            icon: FaLinkedin,
-            url: "https://www.linkedin.com/in/konstantinos-kastritis-269366232/",
-        },
-        Research: {
-            icon: FaGoogleScholar,
-            url: "https://scholar.google.ca/citations?hl=en&user=lVNtC6cAAAAJ",
-        },
-    };
+  const description =
+    "I work at the intersection of machine learning and data science, from experimental modeling to deployed products. Recent work includes a production LLM analytics app, physics-informed ML systems, and end-to-end data pipelines with FastAPI and React.";
 
-    return (
-        <div className="mb-4 p-2 grid gap-y-2 justify-items-center max-sm:max-w-sm sm:gap-x-4 md:w-dvw md:max-w-[900px]  md:gap-y-0 lg:gap-x-8 md:grid-flow-row md:grid-col-flow sm:items-center">
-            <div className="sm:ml-2 md:ml-4 lg:ml-8 md:col-start-1 sm:row-start-1 sm:row-span-2">
-                <img
-                    src={profile}
-                    alt="Profile"
-                    className="rounded-lg size-36 object-cover sm:size-48"
-                />
-            </div>
-            <div className="sm:mr-2 md:mr-4 lg:mr-8 sm:col-start-2 sm:row-start-1">
-                <p className="text-pretty text-justify text-base md:text-lg">
-                    {description}
-                </p>
-            </div>
-            <div className="space-x-8 md:mr-4 lg:mr-8 sm:col-start-2 sm:row-start-2">
-                {Object.entries(contentLinks).map(([name, items], index) => (
-                    <Link
-                        to={items.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={name}
-                        className="inline-flex h-9"
-                    >
-                        {/* className={`h-8 px-3 sm:px-8 inline-flex items-center justify-center whitespace-nowrap rounded-md text-md sm:text-base drop-shadow-lg transition-colors bg-primary/40 shadow ring-0 ring-white/10 md:ring-1 md:bg-background md:hover:text-foreground md:hover:bg-primary/70 hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`} */}
-                        {/* {name} */}
-                        <items.icon className="h-full w-full self-center text-primary sm:text-foreground/85 sm:hover:text-primary" />
-                        {/* <ExternalLinkIcon className="h-5 w-5 text-sky-400 md:text-foreground/85 md:group-hover:text-sky-400" /> */}
-                    </Link>
-                ))}
-            </div>
+  const quickLinks = [
+    {
+      label: "Download Resume",
+      href: "/kastritis_resume.pdf",
+      newTab: true,
+      variant: "default" as const,
+    },
+    {
+      label: "Email Me",
+      href: "mailto:konst.kastritis@gmail.com",
+      newTab: false,
+      variant: "outline" as const,
+    },
+    {
+      label: "Code Samples (GitHub)",
+      href: "https://github.com/kkastr",
+      newTab: true,
+      variant: "ghost" as const,
+    },
+  ];
+
+  return (
+    <section className="mb-8 grid w-full max-w-[900px] gap-4 px-4 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-6 md:gap-x-8">
+      <div>
+        <img
+          src={profile}
+          alt="Portrait of Konstantinos Kastritis"
+          className="size-36 rounded-lg object-cover sm:size-44"
+          width={512}
+          height={650}
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div className="space-y-4">
+        <p className="text-pretty text-base text-foreground/90 md:text-lg">
+          {description}
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {quickLinks.map((link) => (
+            <Button asChild key={link.label} variant={link.variant}>
+              <a
+                href={link.href}
+                target={link.newTab ? "_blank" : undefined}
+                rel={link.newTab ? "noopener noreferrer" : undefined}
+                aria-label={link.label}
+              >
+                {link.label}
+              </a>
+            </Button>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 }
